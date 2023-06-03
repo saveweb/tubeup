@@ -1,3 +1,9 @@
+raise DeprecationWarning(
+    "biliup now is deprecated, we moved to <github.com/saveweb/biliarchiver>"
+    " and no longer based on tubeup."
+)
+
+
 import glob
 import json
 import asyncio
@@ -95,7 +101,7 @@ def gen_ass_from_pb(vieobasename):
     if not os.path.exists(danmaku_pb):
         return
     with open(danmaku_pb, 'rb') as f:
-        ass_text = proto2ass(f.read(), 1920, 1080)    
+        ass_text = proto2ass(f.read(), 1920, 1080)
     with open(ass_file, 'w', encoding='utf-8') as f:
         f.write(ass_text)
     print('== danmaku ass')
